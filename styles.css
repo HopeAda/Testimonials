@@ -1,0 +1,188 @@
+:root {
+  /* Primary */
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Neutral */
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+.barlow-semi-condensed-medium {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-semi-condensed-semibold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--White);
+  background-color: var(--Lightgrayishblue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.5rem;
+}
+
+.one {
+  background-color: var(--Moderateviolet);
+  background-image: url(/testimonials-grid-section-main/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
+}
+.two {
+  background-color: var(--Verydarkgrayishblue);
+}
+.three,
+.five {
+  background-color: var(--White);
+  color: var(--Verydarkgrayishblue);
+}
+.four {
+  background-color: var(--Verydarkblackishblue);
+}
+
+.card {
+  width: 35rem;
+  height: auto;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 10px;
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.profile {
+  width: 4rem;
+  border-radius: 100%;
+  border: 2px solid var(--Lightgrayishblue);
+}
+
+.four .profile {
+  border: 2px solid var(--Moderateviolet);
+}
+label {
+  float: right;
+  width: 80%;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+label .about {
+  opacity: 50%;
+}
+.comment {
+  margin: 2rem;
+}
+
+.comment p {
+  opacity: 70%;
+  margin: 1rem 0;
+}
+
+.comment h1 {
+  font-size: 2rem;
+  margin-bottom: 1 rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1440px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 2rem 0;
+  }
+  .widegrid {
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    grid-template-rows: repeat(3, 30rem);
+    grid-template-areas:
+      "one one two"
+      "three four four"
+      "five five .";
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .card {
+    width: fit-content;
+    margin: 0;
+  }
+  .one {
+    grid-area: one;
+  }
+  .two {
+    grid-area: two;
+  }
+  .three {
+    grid-area: three;
+  }
+  .four {
+    grid-area: four;
+  }
+  .five {
+    grid-area: five;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 0 0;
+  }
+  .widegrid {
+    display: grid;
+    grid-template-columns: repeat(4, 30rem);
+    grid-template-rows: repeat(2, 30rem);
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .card {
+    width: fit-content;
+    margin: 0;
+  }
+  .one {
+    grid-area: one;
+  }
+  .two {
+    grid-area: two;
+  }
+  .three {
+    grid-area: three;
+  }
+  .four {
+    grid-area: four;
+  }
+  .five {
+    grid-area: five;
+  }
+}
