@@ -154,7 +154,7 @@ label .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0 0 0;
+    padding: 4rem 0 4rem 0;
   }
   .widegrid {
     display: grid;
