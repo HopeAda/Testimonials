@@ -45,7 +45,7 @@ body {
 
 .one {
   background-color: var(--Moderateviolet);
-  background-image: url(/testimonials-grid-section-main/images/bg-pattern-quotation.svg);
+  background-image: url(/images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: 80% 0%;
 }
